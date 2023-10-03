@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="./styles/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <title>Todo-List</title>
+</head>
+
+<body>
+    <div class="outro"><span>Done By Mohammad Zeidan<br>Thanks For Watching!</span></div>
+    <div class="app">
+        <div class="dashboard ">
+            <div class="head">
+                <h3 id="dashTitle">Menu</h3>
+                <i id="menuIcon" class="fa-solid fa-navicon"></i>
+            </div>
+            <div class="section">
+                <h3 class="secTitle">Set Priority</h3>
+                <input type="text" id="secInput" class="normal">
+                <ul>
+                    <li onclick="secChange(this,'low')" class="low"><span>Low</span></li>
+                    <li onclick="secChange(this,'normal')" class="normal"><span>Normal</span></li>
+                    <li onclick="secChange(this,'imp')" class="imp"><span>Important</span></li>
+                    <li onclick="secChange(this,'high')" class="high"><span>High</span></li>
+                    <li onclick="secChange(this,'v-high')" class="v-high"><span>Very High</span></li>
+                </ul>
+            </div>
+            <button id="addList"><i class="fa-solid fa-plus"></i> New Priority</button>
+        </div>
+        <div class="content activeSec ">
+            <div class="head">
+                <h1 class="title">Todo List</h1>
+                <button id="clearAllBtn">Clear All</button>
+            </div>
+            <div class="tasks">
+                <input type="text" class="taskInput " placeholder="Add Todo">
+                <ul class="tasksContainer">
+                    <h3 class="closeMsg">There Is No Tasks Yet</h3>
+                </ul>
+            </div>
+            <button id="btnAddTodo">Add Todo</button>
+        </div>
+    </div>
+    <script src="master.js"></script>
+</body>
+
+</html>
